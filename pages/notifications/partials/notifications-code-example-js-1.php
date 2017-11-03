@@ -6,9 +6,9 @@ $(() => {
         types: {                        // optional message types
             'alert': {
                 color: '#fff',          // optional font-color, default is #000
-                bgColor: '#e74c3c',     // optonal background color, default is rgba(255, 255, 255, 0.85)
-                borderColor: '#e74c3c', // optonal border color, default is #000
-                closerColor: '#fff'     // optonal X color, default is #000
+                bgColor: '#e74c3c',     // optional background color, default is rgba(255, 255, 255, 0.85)
+                borderColor: '#e74c3c', // optional border color, default is #000
+                closerColor: '#fff'     // optional X color, default is #000
             },
             'warning': {
                 color: '#fff',

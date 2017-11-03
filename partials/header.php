@@ -8,6 +8,20 @@
                     <span>Menu</span>
                 </a>
             </div>
+            <div class="columns shrink text-right">
+                <ul class="social-menu menu">
+                    <li>
+                        <a href="https://github.com/tm0e83/ui-collection">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:tm0e83@gmail.com">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 

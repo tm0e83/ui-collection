@@ -1,0 +1,47 @@
+@mixin uicSpinner($diameter, $borderWidth, $circleColor, $spinnerColor) {
+    display:inline-block;
+    position:relative;
+    width:$diameter;
+    height:$diameter;
+
+    &:before {
+        content:' ';
+        position:absolute;
+        top:0;
+        left:50%;
+        margin-left:- $diameter / 2;
+        width:$diameter;
+        height:$diameter;
+        border:$borderWidth solid $circleColor;
+        border-radius:100em;
+    }
+
+    &:after {
+        content:' ';
+        position:absolute;
+        top:0;
+        left:50%;
+        margin-left:- $diameter / 2;
+        width:$diameter;
+        height:$diameter;
+        border:$borderWidth solid transparent;
+        border-top-color:$spinnerColor;
+        border-radius:100em;
+        animation:uicLoaderAnimation .6s linear;
+        animation-iteration-count:infinite;
+    }
+}
+
+@keyframes uicLoaderAnimation {
+    0% { transform:rotate(0deg); }
+    100% { transform:rotate(360deg); }
+}
+
+.uic-spinner {
+    @include uicSpinner(
+        $spinner-diameter,
+        $spinner-border-width,
+        $spinner-circle-color,
+        $spinner-color
+    );
+}

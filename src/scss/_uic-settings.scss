@@ -1,0 +1,66 @@
+//  UI Collection Settings
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Checkboxes
+//   2. Radio Buttons
+//   3. Breadcrumbs
+//   4. Progress
+//   5. Spinner
+//   6. Spinner Overlay
+//   7. Two List Filter
+
+
+// 1. Checkboxes
+// ---------
+
+$pretty-checkbox-background-color:#fff;
+$pretty-checkbox-checkmark-color:#555;
+$pretty-checkbox-border-color:$pretty-checkbox-checkmark-color;
+
+// 2. Radio Buttons
+// ---------
+
+$pretty-radio-background-color:#fff;
+$pretty-radio-bullet-color:#555;
+$pretty-radio-border-color:$pretty-radio-bullet-color;
+
+// 3. Breadcrumbs
+// ---------
+
+$breadcrumb-devider-color:#ccc;
+
+// 4. Progress
+// ---------
+
+$progress-num-steps:3;
+$progress-breakpoint-width:800px;
+$progress-border-color:rgba(34, 36, 38, 0.15);
+
+// 5. Spinner
+// ---------
+
+$spinner-diameter: 1em;
+$spinner-border-width: 3px;
+$spinner-circle-color: rgba(0, 0, 0, 0.35);
+$spinner-color: rgba(255, 255, 255, 0.5);
+
+// 6. Spinner Overlay
+// ---------
+
+$spinner-overlay-diameter: 2em;
+$spinner-overlay-border-width: $spinner-border-width;
+$spinner-overlay-circle-color: $spinner-circle-color;
+$spinner-overlay-color: $spinner-color;
+$spinner-overlay-dimmer-background-color: rgba(255, 255, 255, 0.7);
+$spinner-overlay-dimmer-font-color: #333;
+
+// 7. Two List Filter
+// ---------
+
+$two-list-size:8;
+$two-list-link-color:rgb(229,99,23);
+$two-list-selected-backgroundcolor:$two-list-link-color;
+$two-list-active-button-background-color:$two-list-link-color;
+$two-list-breakpoint-width:800px;

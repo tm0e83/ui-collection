@@ -1,0 +1,223 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@import 'font-awesome';
+
+@include foundation-global-styles;
+//@include foundation-grid;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@import 'uic-settings';
+
+@import 'two-list-filter';
+@import 'multi-checkbox-dropdown';
+@import 'pretty-checkboxes';
+@import 'pretty-radio-buttons';
+@import 'multi-select-dropdown';
+@import 'multi-filter-input';
+@import 'single-select-drop';
+@import 'spinner';
+@import 'spinner-overlay';
+@import 'progress-steps';
+@import 'breadcrumb';
+@import 'notifications';
+
+
+body {
+    padding-bottom:7.5em;
+    background-color:#fff;
+}
+
+header {
+    padding:11.5em 0 9.5em;
+    margin-bottom:3.5rem;
+    background-color:#2c3e50;
+    color:#fff;
+
+    h1 {
+        font-size:5rem;
+    }
+
+    h2 {
+        font-size:1.85rem;
+    }
+
+    .button-row {
+        margin-top:1.5rem;
+    }
+
+    .button {
+        border:2px solid #fff;
+        background-color:transparent;
+        padding:1rem 2rem;
+    }
+}
+
+section {
+    padding:2.5rem 0;
+
+    .headline-row,
+    .example-row,
+    .code-row {
+        margin-bottom:1.5rem;
+    }
+}
+
+.fa-check {
+    color:#21ba45;
+}
+
+.uic-multi-filter-input .uic-add.uic-has-input {
+    background-color:rgb(229,99,23);
+}
+
+.header-top-bar {
+    position:fixed;
+    width:100%;
+    top:0;
+    padding:1.5em 0;
+
+    .logo {
+        margin-right:1.5rem;
+    }
+}
+
+.version {
+    background-color:$black;
+    border-radius:0.2rem;
+    padding:0.25rem 0.5rem;
+    font-weight:normal;
+    font-size:0.9rem;
+    line-height:1;
+}
+
+#main-menu-toggle {
+    vertical-align:middle;
+    padding:0.35rem 1rem 0.65rem;
+    border-radius:0.25rem;
+    transition:background-color 125ms ease-in-out;
+
+    &:hover {
+        background-color:rgba(255,255,255,0.3);
+    }
+
+    span:first-child {
+        vertical-align:middle;
+        @include hamburger($white, $light-gray, 1rem, 0.75rem, 0.125rem); //$color, $color-hover, $width, $height, $weight, $bars);
+    }
+
+    span:last-child {
+        vertical-align:middle;
+        color:#fff;
+        line-height:1;
+        margin-left:0.35rem;
+        font-size:1rem;
+    }
+}
+
+.logo {
+    background-color:$uic-color;
+    padding:0.25rem 0.35rem;
+    margin-right:0.5rem;
+    font-size:1.5rem;
+    font-weight:bold;
+    vertical-align:middle;
+}
+
+#main-menu {
+    a {
+        color:$dark-gray;
+    }
+
+    >.menu {
+        >.menu-header {
+            line-height:1;
+
+            >a {
+                color:$white;
+                font-size:1.1rem;
+            }
+        }
+    }
+
+    .menu-text {
+        color:$light-gray;
+    }
+
+    >.menu>li,
+    >.menu>li>a {
+        color:$light-gray;
+        font-size:0.9rem;
+    }
+
+    >.menu>li>a:not([href]) {
+        cursor:default;
+    }
+
+    >.menu>li {
+        border-bottom:1px solid #333;
+        padding:$global-menu-padding;
+        font-size:0.8rem;
+    }
+}
+
+
+
+.uic-pretty-checkbox.blue {
+    @include uic-pretty-checkbox(#2980b9, #2980b9, #fff);
+}
+
+.uic-pretty-checkbox.red {
+    @include uic-pretty-checkbox(#fff, #c0392b, #c0392b);
+}
+
+.uic-pretty-radio.blue {
+    @include uic-pretty-radio(#fff, #2980b9, #2980b9);
+}
+
+.uic-pretty-radio.red {
+    @include uic-pretty-radio(#fff, #c0392b, #c0392b);
+}

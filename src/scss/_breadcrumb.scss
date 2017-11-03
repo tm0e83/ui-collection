@@ -1,0 +1,10 @@
+.uic-breadcrumb {
+    .uic-section {
+        display:inline;
+    }
+
+    .uic-divider {
+        color:$breadcrumb-devider-color;
+        margin:0 0.5em;
+    }
+}

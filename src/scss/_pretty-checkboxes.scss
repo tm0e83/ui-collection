@@ -1,0 +1,59 @@
+.uic-pretty-checkbox {
+    overflow:hidden;
+    width:20px;
+    height:20px;
+    display:inline-block;
+
+    input {
+        display:none;
+    }
+
+    label {
+        display:block;
+        position:relative;
+        content:'';
+        width:20px;
+        height:20px;
+        border:1px solid $pretty-checkbox-border-color;
+        background-color:$pretty-checkbox-background-color;
+        border-radius:0.25em;
+        cursor:pointer;
+        margin:0;
+        transition:all 75ms ease-in-out;
+
+        &:after {
+            content:'';
+            position:absolute;
+            top:4px;
+            left:3px;
+            width:13px;
+            height:8px;
+            opacity:0;
+            border:4px solid $pretty-checkbox-checkmark-color;
+            border-top:none;
+            border-right:none;
+            background:transparent;
+            transform:rotate(-45deg) scale(0);
+            backface-visibility:hidden;
+            color:#555;
+            overflow:hidden;
+            transition:all 75ms ease-in-out;
+        }
+    }
+
+    input:checked + label:after {
+        transform:rotate(-45deg) scale(1);
+        opacity:1;
+    }
+}
+
+@mixin uic-pretty-checkbox($pretty-checkbox-background-color, $pretty-checkbox-border-color, $pretty-checkbox-checkmark-color) {
+    label {
+        border-color: $pretty-checkbox-border-color;
+        background-color:$pretty-checkbox-background-color;
+
+        &:after {
+            border-color: $pretty-checkbox-checkmark-color;
+        }
+    }
+}

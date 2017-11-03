@@ -1,0 +1,77 @@
+.uic-pretty-radio {
+    overflow:hidden;
+    width:20px;
+    height:20px;
+    display:inline-block;
+
+    input {
+        display:none;
+    }
+
+    label {
+        display:block;
+        position:relative;
+        content:'';
+        width:20px;
+        height:20px;
+        border:1px solid $pretty-radio-border-color;
+        background-color:$pretty-radio-background-color;
+        border-radius:20px;
+        cursor:pointer;
+        margin:0;
+        transition:all 75ms ease-in-out;
+
+        &:after {
+            content:'';
+            position:absolute;
+            top:4px;
+            left:4px;
+            width:10px;
+            height:10px;
+            opacity:0;
+            border-radius:10px;
+            background:transparent;
+            overflow:hidden;
+            transition:all 75ms ease-in-out;
+        }
+    }
+
+    input:checked + label {
+        background-color:$pretty-radio-background-color;
+    }
+
+    input:checked + label:after {
+        opacity:1;
+        background-color:$pretty-radio-bullet-color;
+    }
+
+    &.uic-blue {
+        input:checked + label {
+            border-color:#2980b9;
+        }
+
+        input:checked + label:after {
+            background-color:#2980b9;
+        }
+    }
+}
+
+@mixin uic-pretty-radio($pretty-radio-background-color, $pretty-radio-border-color, $pretty-radio-bullet-color) {
+    label {
+        border-color: $pretty-radio-border-color;
+        background-color:$pretty-radio-background-color;
+
+        &:after {
+            border-color: $pretty-radio-bullet-color;
+        }
+    }
+
+    input:checked + label {
+        background-color:$pretty-radio-background-color;
+    }
+
+    input:checked + label:after {
+        opacity:1;
+        background-color:$pretty-radio-bullet-color;
+    }
+}

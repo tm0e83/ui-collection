@@ -1,0 +1,135 @@
+$padding:0.35em; // only 1 value allowed
+$border-radius:0;
+//$border-active-color:#aaa;
+$menu-item-padding:0.5em;
+$message-padding:0.5em;
+$caret-color:#666;
+$caret-hover-color:#222;
+$message-color:#ccc;
+
+.uic-single-select-drop {
+    * {
+        box-sizing:border-box;
+        font-size:1em;
+        margin:0;
+        padding:0;
+    }
+
+    width:100%;
+    background-color:#fff;
+    border:1px solid #cacaca;
+    line-height:1em;
+    display:inline-block;
+    position:relative;
+    text-align:left;
+    border-radius:$border-radius;
+    transition:border-color 250ms ease-in-out;
+
+    .uic-caret-down {
+        content:'';
+        cursor:pointer;
+        position:absolute;
+        top:calc(1em - 5px);
+        margin-top:$padding;
+        right:0.5em;
+        user-select:none;
+        width:0;
+        height:0;
+        border-style:solid;
+        border-width:5px 4px 0 4px;
+        border-color:$caret-color transparent transparent transparent;
+        transition:all 150ms ease-in-out;
+    }
+
+    .uic-selection {
+        cursor:pointer;
+        overflow:hidden;
+        padding:2 * $padding $padding;
+    }
+
+    .uic-menu {
+        position:absolute;
+        z-index:10;
+        top:100%;
+        left:-1px;
+        background-color:#fff;
+        border:1px solid #8a8a8a;
+        border-top:0;
+        width:calc(100% + 2px)!important;
+        opacity:0;
+        display:none;
+        transition:opacity 100ms ease-in-out;
+
+        .uic-input {
+            display:block;
+            width:100%;
+            border:0;
+            box-shadow:none;
+            line-height:100%;
+            outline:0;
+            padding:$padding;
+        }
+
+        .uic-scrollable {
+            width:100%;
+            overflow-x:hidden;
+            overflow-y:scroll;
+            overflow-scrolling:touch;
+            -webkit-overflow-scrolling:touch;
+            scroll-behavior:smooth;
+            -webkit-scroll-behavior:smooth;
+            max-height:(8 * 1em) + (8 * $menu-item-padding * 2) + 0.05em;
+            transition:opacity 100ms ease-in-out;
+
+            .uic-menu-item {
+                padding:$menu-item-padding $padding;
+                line-height:1em;
+                cursor:pointer;
+                user-select:none;
+                transition:background 200ms ease-in-out;
+
+                &:hover {
+                    background:#f3f3f3;
+                }
+            }
+        }
+    }
+
+    .uic-message {
+        display:none;
+        user-select:none;
+        padding:$message-padding $padding;
+        line-height:1em;
+        color:$message-color;
+    }
+
+    &.uic-expanded {
+        border-bottom:0;
+        border-color:#8a8a8a;
+        border-bottom-left-radius:0;
+        border-bottom-right-radius:0;
+
+        .uic-selection {
+            /* Permalink - use to edit and share this gradient:http://colorzilla.com/gradient-editor/#f8f8f8+0,eeeeee+100 */
+            background:#f8f8f8;
+            background:-moz-linear-gradient(top,  #f8f8f8 0%, #eeeeee 100%);
+            background:-webkit-linear-gradient(top,  #f8f8f8 0%,#eeeeee 100%);
+            background:linear-gradient(to bottom,  #f8f8f8 0%,#eeeeee 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#eeeeee',GradientType=0 );
+        }
+
+        .uic-caret-down {
+            transform:rotate(180deg);
+        }
+    }
+
+    &.uic-expanded .uic-menu {
+        opacity:1;
+        border-bottom-left-radius:$border-radius;
+        border-bottom-right-radius:$border-radius;
+    }
+
+    &:hover .uic-caret-down {
+        border-color:$caret-hover-color transparent transparent transparent;
+    }
+}
